@@ -1,0 +1,6 @@
+#!/bin/bash
+sum=$(( \
+  5#$(tr -cd 'water' <<<"$WATER" | tr 'water' '01234') \
++ 4#$(tr -cd 'stir'  <<<"$STIR"  | tr 'stir'  '0123')  \
+))
+printf '%o\n' "$sum" | tr '01234567' 'bestchol'
